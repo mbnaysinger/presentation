@@ -52,14 +52,25 @@ const slidesContent = [
   <>
     <h2>Funcionalidades Principais</h2>
     <div className={styles['side-by-side-slide']}>
-      <div className={styles.imageSide}>
-        <Image
-          src="/agilinm/controle_atuacao.png"
-          alt="Controle de Atuação"
-          width={500}
-          height={300}
-          layout="responsive"
-        />
+      <div className={styles.imageColumn}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/agilinm/controle_atuacao.png"
+            alt="Controle de Atuação"
+            width={600}
+            height={300}
+            layout="responsive"
+          />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/agilinm/spa.png"
+            alt="SPA - Selfie Planning Assessment"
+            width={600}
+            height={300}
+            layout="responsive"
+          />
+        </div>
       </div>
       <div className={styles.textSide}>
         <ul>
@@ -76,14 +87,25 @@ const slidesContent = [
   <>
     <h2>Funcionalidades Principais</h2>
     <div className={styles['side-by-side-slide']}>
-      <div className={styles.imageSide}>
-        <Image
-          src="/agilinm/controle_atuacao.png"
-          alt="Controle de Atuação"
-          width={500}
-          height={300}
-          layout="responsive"
-        />
+      <div className={styles.imageColumn}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/agilinm/controle_atuacao.png"
+            alt="Controle de Atuação"
+            width={600}
+            height={300}
+            layout="responsive"
+          />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/agilinm/spa.png"
+            alt="SPA - Selfie Planning Assessment"
+            width={600}
+            height={300}
+            layout="responsive"
+          />
+        </div>
       </div>
       <div className={styles.textSide}>
         <ul>
@@ -178,15 +200,14 @@ const slidesContent = [
     <h2>AgilInM</h2>
     <p className={styles.subtitle}>Transformando a cultura organizacional através da inovação</p>
     <ul>
-      <li>✅ <span className={styles.highlight}>Plataforma unificada</span> para gestão completa</li>
-      <li>✅ <span className={styles.highlight}>Cultura de autoplanejamento</span> e inovação</li>
-      <li>✅ <span className={styles.highlight}>Visibilidade total</span> para tomada de decisões</li>
-      <li>✅ <span className={styles.highlight}>Gestão inteligente</span> de recursos humanos</li>
-      <li>✅ <span className={styles.highlight}>Conformidade e produtividade</span> garantidas</li>
+      <li><span className={styles.highlight}>Plataforma unificada</span> para gestão completa</li>
+      <li><span className={styles.highlight}>Cultura de autoplanejamento</span> e inovação</li>
+      <li><span className={styles.highlight}>Visibilidade total</span> para tomada de decisões</li>
+      <li><span className={styles.highlight}>Gestão inteligente</span> de recursos humanos</li>
+      <li><span className={styles.highlight}>Conformidade e produtividade</span> garantidas</li>
     </ul>
-    <p style={{ marginTop: '40px', fontSize: '1.6rem', color: '#00d4ff' }}>
-      <strong>Agile Innovation Management</strong><br />
-      O futuro da gestão está aqui.
+    <p style={{ marginTop: '40px', fontSize: '4.6rem', color: '#00d4ff' }}>
+      <strong>Obrigado!</strong><br />
     </p>
   </>
 ];

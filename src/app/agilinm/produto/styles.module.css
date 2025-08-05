@@ -196,7 +196,7 @@
 
 .side-by-side-slide {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 60px;
     width: 100%;
@@ -204,16 +204,29 @@
     margin-top: 20px;
 }
 
-.imageSide {
+.imageColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     flex: 1;
     max-width: 700px;
+}
+
+.imageWrapper {
     border-radius: 15px;
     border: 2px solid rgba(0, 212, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.imageSide img {
+.imageWrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.3);
+    border-color: #00d4ff;
+}
+
+.imageWrapper img {
     display: block;
     width: 100%;
     height: auto;
