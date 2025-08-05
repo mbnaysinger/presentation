@@ -53,20 +53,20 @@
 
 .slide ul {
     text-align: left;
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .slide li {
     font-size: 1.3rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding-left: 20px;
     position: relative;
     color: #e0e0e0;
 }
 
 .slide li::before {
-    content: "▶";
+    content: "▶ ";
     color: #00d4ff;
     position: absolute;
     left: 0;
@@ -77,6 +77,8 @@
     color: #80bfff;
     margin-bottom: 40px;
     font-weight: 300;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .highlight {
@@ -89,7 +91,7 @@
 
 .navigation {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -130,7 +132,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1200px;
+    width: 100%;
     margin: 30px auto;
 }
 
@@ -189,6 +192,49 @@
 
 .solution h4 {
     color: #4ecdc4;
+}
+
+.side-by-side-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 20px;
+}
+
+.imageSide {
+    flex: 1;
+    max-width: 700px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+    overflow: hidden;
+}
+
+.imageSide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.textSide {
+    flex: 1.5;
+}
+
+.textSide ul {
+    max-width: none;
+}
+
+@media (max-width: 992px) {
+    .side-by-side-slide {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .textSide {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {

@@ -1,44 +1,101 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import styles from './styles.module.css';
 
 const slidesContent = [
   // Slide 1: Título
   <>
-    <div className={styles.logo}>AgilInM</div>
+    <Image
+      src="/agilinm/logo_agilinm_branco.png"
+      alt="Logo AgilInM"
+      width={400}
+      height={100}
+      style={{ marginBottom: '40px' }}
+      priority
+    />
     <h1>Agile Innovation Management</h1>
-    <p className={styles.subtitle}>Plataforma para Gestão do Conhecimento Orientada à Inovação</p>
+    <p className={styles['subtitle']}>Plataforma para Gestão do Conhecimento Orientada à Inovação</p>
     <p>Sistema FIERGS - Departamento Regional</p>
   </>,
   // Slide 2: O que é
   <>
     <h2>O que é o AgilInM?</h2>
+    <p style={{ margin: '0.5rem 0', textAlign: 'left', maxWidth: '1300px' }}>
+      Plataforma de Gestão Ágil da Inovação, que busca integrar dados de projetos e consultorias 
+      junto à uma ferramenta de gerenciamento de equipes e atividades, através da cultura do 
+      autoplanejamento. 
+    </p>
+    <p style={{ textAlign: 'left', maxWidth: '1300px' }}>
+    Com uma visão de gestão integrada à macroentregas, tarefas e seus requisitos, é possível 
+    traçar os caminhos críticos das demandas e gerar informações relevantes à nível gerencial 
+    e operacional. Através de análise preditiva de projetos, é possível traçar 
+    caminhos otimizados para atender demandas futuras e formar times que agreguem valor às entregas.
+    </p>
     <div className={styles['features-grid']}>
       <div className={styles['feature-card']}>
         <h4>🎯 Gestão do Conhecimento</h4>
-        <p>Plataforma orientada para gestão da inovação com foco em organização e estruturação do conhecimento empresarial.</p>
+        <p>Plataforma orientada para gestão da inovação com foco em organização e estruturação do conhecimento.</p>
       </div>
       <div className={styles['feature-card']}>
         <h4>📊 Plataforma Modularizada</h4>
         <p>Gerenciamento integrado de projetos, consultorias e serviços em uma base unificada.</p>
       </div>
       <div className={styles['feature-card']}>
-        <h4>📱 Aplicativo Mobile</h4>
-        <p>Módulo SPA (Selfie Planning Assessment) disponível em dispositivos móveis.</p>
+        <h4>💡 Autoplanejamento (SPA)</h4>
+        <p>Módulo SPA (Selfie Planning Assessment) para gestão de tarefas atrelado à cultura do autoplanejamento.</p>
       </div>
     </div>
   </>,
   // Slide 3: Funcionalidades Principais
   <>
     <h2>Funcionalidades Principais</h2>
-    <ul>
-      <li><span className={styles.highlight}>Organização semanal de tarefas</span> integrada aos demais módulos</li>
-      <li><span className={styles.highlight}>Relatórios, gráficos e dashboards</span> sob demanda</li>
-      <li><span className={styles.highlight}>Base unificada</span> contemplando todas as unidades dos institutos de tecnologia</li>
-      <li><span className={styles.highlight}>Gestão de skills</span> dos colaboradores com classificação por gestores</li>
-      <li><span className={styles.highlight}>Visibilidade centralizada</span> para o nível de gestão</li>
-    </ul>
+    <div className={styles['side-by-side-slide']}>
+      <div className={styles.imageSide}>
+        <Image
+          src="/agilinm/controle_atuacao.png"
+          alt="Controle de Atuação"
+          width={500}
+          height={300}
+          layout="responsive"
+        />
+      </div>
+      <div className={styles.textSide}>
+        <ul>
+          <li><span className={styles.highlight}>Organização semanal de tarefas</span> integrada aos demais módulos</li>
+          <li><span className={styles.highlight}>Relatórios, gráficos e dashboards</span> sob demanda</li>
+          <li><span className={styles.highlight}>Base unificada</span> contemplando todas as unidades dos institutos de tecnologia</li>
+          <li><span className={styles.highlight}>Gestão de skills</span> dos colaboradores com classificação por gestores</li>
+          <li><span className={styles.highlight}>Visibilidade centralizada</span> para o nível de gestão</li>
+        </ul>
+      </div>
+    </div>
+  </>,
+  // Slide 3: Funcionalidades Principais
+  <>
+    <h2>Funcionalidades Principais</h2>
+    <div className={styles['side-by-side-slide']}>
+      <div className={styles.imageSide}>
+        <Image
+          src="/agilinm/controle_atuacao.png"
+          alt="Controle de Atuação"
+          width={500}
+          height={300}
+          layout="responsive"
+        />
+      </div>
+      <div className={styles.textSide}>
+        <ul>
+          <li><span className={styles.highlight}>Análise de alertas e inconsistências</span> através de Agentes de Inteligência Artificial</li>
+          <li><span className={styles.highlight}>Gestão de recursos e espaços</span> (laboratórios) para reservas em atividades</li>
+          <li><span className={styles.highlight}>Gestão de tenancy</span> (Unidade) para configurações peculiares de cada instituto</li>
+          <li><span className={styles.highlight}>Gestão de vínculos de trabalho</span> para histórico de cargos e custos de projetos</li>
+          <li><span className={styles.highlight}>Controle de atuação</span> para administrar times de projetos, consultorias e serviços</li>
+          <li><span className={styles.highlight}>Ferramentas de controle de qualidade (SGQ)</span> com controle de tarefas, performance e inconsistências</li>
+        </ul>
+      </div>
+    </div>
   </>,
   // Slide 4: Problema vs Solução
   <>
