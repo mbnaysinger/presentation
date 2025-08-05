@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Maike Naysinger Borges",
-  description: "Portfólio profissional de desenvolvimento full-stack",
+  title: "FIERGS - Apresentação",
+  description: "Apresentação",
 };
 
 export default function RootLayout({
