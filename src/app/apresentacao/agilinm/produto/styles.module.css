@@ -1,0 +1,215 @@
+.presentation-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.slide h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.slide h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.slide h3 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #4da6ff;
+}
+
+.slide p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 900px;
+    color: #e0e0e0;
+}
+
+.slide ul {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slide li {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+    color: #e0e0e0;
+}
+
+.slide li::before {
+    content: "▶";
+    color: #00d4ff;
+    position: absolute;
+    left: 0;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #80bfff;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.navigation {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    background: rgba(0, 212, 255, 0.2);
+    border: 2px solid #00d4ff;
+    color: #00d4ff;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+    background: rgba(0, 212, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.slide-counter {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: rgba(0, 212, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #00d4ff;
+    backdrop-filter: blur(10px);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d4ff;
+}
+
+.feature-card h4 {
+    color: #00d4ff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00d4ff, #0099cc, #4da6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+}
+
+.problem-solution {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.problem, .solution {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.problem h4, .solution h4 {
+    color: #ff6b6b;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.solution h4 {
+    color: #4ecdc4;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        padding: 30px 20px;
+    }
+    
+    .slide h1 {
+        font-size: 2.5rem;
+    }
+    
+    .slide h2 {
+        font-size: 2rem;
+    }
+    
+    .problem-solution {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+} 
